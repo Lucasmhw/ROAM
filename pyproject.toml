@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roam-rebuttal"
+version = "0.1.0"
+description = "Auditable task-conditioned metric optimization and rebuttal experiments"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "numpy>=1.24", "scipy>=1.10", "pandas>=2", "scikit-learn>=1.3"]
+
+[tool.setuptools.packages.find]
+include = ["roam*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

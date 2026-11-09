@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+data/
+vendor/
+checkpoints/
+*.pt
+*.npz
+*.zip
+*.tar.gz
+.env
+*.pem
+*.key
+/results/

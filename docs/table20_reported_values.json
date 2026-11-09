@@ -1,0 +1,11 @@
+{
+  "provenance": "Transcribed from the supplied manuscript, Table 20, page 26. These are manuscript-reported aggregates, not new experiment records.",
+  "pairs": [
+    {"source":"ETTh1","target":"ETTh2","standard_mse":0.421,"standard_mae":0.438,"roam_mse":0.392,"roam_mae":0.414},
+    {"source":"ETTm1","target":"Weather","standard_mse":0.286,"standard_mae":0.332,"roam_mse":0.271,"roam_mae":0.318},
+    {"source":"Weather","target":"ECL","standard_mse":0.201,"standard_mae":0.284,"roam_mse":0.189,"roam_mae":0.271},
+    {"source":"ECL","target":"Exchange","standard_mse":0.462,"standard_mae":0.486,"roam_mse":0.437,"roam_mae":0.463}
+  ],
+  "separate_twelve_transfer_aggregate":{"standard_mse":0.342,"standard_mae":0.385,"roam_mse":0.322,"roam_mae":0.366,"reported_gain_percent":5.8},
+  "figure_scope":"Only the four individually reported Table 20 pairs; do not infer other cells or reconstruct the 12-transfer aggregate."
+}

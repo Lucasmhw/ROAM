@@ -1,0 +1,51 @@
+# Figure sources and manuscript placement
+
+All `results/` paths below are generated output paths. Run the experiment and aggregation commands in the README before plotting; precomputed figures and experiment records are not included in the GitHub checkout.
+
+The figures use explicit JSON records. Plotting never fills absent observations with zero. PNG files are convenient for inspection; PDF and SVG files are vector exports for manuscript preparation. The plotting scripts preserve the numerical data and label the error bars as sample standard deviations.
+
+## Figure 6 replacement: esdH W1
+
+**File:** `results/figures/Figure6_Table20_consistent.pdf`
+
+**Input:** `docs/table20_reported_values.json`, transcribed from the supplied manuscript's Table 20, page 26.
+
+**Script:** `python scripts/plot_table20.py`
+
+**Caption:** Relative MSE reductions for the four source–target pairs individually reported in Table 20. Each value is calculated as 100 times the difference between standard-recipe and ROAM MSE, divided by standard-recipe MSE, using the displayed table values. Rows identify sources and columns identify targets. Gray cells denote pairs not individually reported in Table 20. The 12-transfer aggregate is a separate statistic and is not plotted here.
+
+This replacement has a deliberately explicit four-pair scope. It establishes consistency with its declared tabular source; it does not independently validate the historical experiments. The accompanying `Table20_pairwise_MSE.pdf` provides a direct paired-bar view of the same MSE values. `Figure6_data.csv` records the underlying numbers and computed gains.
+
+## Control transfer: p4jQ W2, esdH W1, gg28 W1/Q1
+
+**File:** `results/figures/control_transfer.pdf`
+
+**Input:** `results/suite/target_*_96_{conditioned,source_mean,direct_search}_seed*.json`
+
+**Caption:** Transfer of source-fitted optimizer initialization to ETTh2 and ETTm2, excluded from source calibration. Each target predictor is trained from a fresh initialization with DLinear, context/horizon 96/96, four population members, a 20-second training/validation cap, and 20 model-level validation calls. Dots show ten reporting seeds; diamonds and error bars show the mean and sample standard deviation. Source calibration is an additional cost and is quantified separately. Checkpoints are selected using validation only.
+
+## Phase policy: gg28 Q2
+
+**File:** `results/figures/phase_policy.pdf`
+
+**Caption:** Discrete phase switching, the specified continuous blend, and Phase I alone under the same task initializer, metric, four-member population, 20-second target cap, and five evaluation rounds. Top: test MSE, with dots for individual runs and diamonds/error bars for the mean/sample standard deviation over ten seeds. Bottom: the best validation MSE found among all members up to each population round, with lines/bands for the mean/sample standard deviation. The horizontal axis denotes evaluation rounds, not unrecorded exact timestamps. The continuous arm uses the stated disagreement/curvature weighting rule and the same curvature-pair and line-search safeguards. This comparison concerns one explicit continuous policy.
+
+## Convex objective and stopping: esdH W2
+
+**Files:** `results/figures/dlinear_validation_trajectories.pdf` and `results/figures/dlinear_training_objective.pdf`
+
+**Caption for validation trajectories:** DLinear validation trajectories for the same unregularized squared-error objective. Both learning rates are selected from the same five-candidate validation grid with a separate selection seed. ROAM is run for 2,000 updates and AdamW for 10,000; optimizer and update budgets are explicit. Lines and shaded regions show means and sample standard deviations over ten seeds. The dashed reference is the validation MSE of the exact training least-squares solution, which need not minimize validation risk.
+
+**Caption for training objective:** Final full-training MSE for DLinear at four ETTh2 horizons and ETTm2-96, with zero weight decay for all stochastic runs. Points and bars show means and sample standard deviations over ten seeds. The dashed line is the float64 least-squares minimum in the equivalent identifiable affine predictor family. Final training loss is reported separately from validation-selected test performance; the comparison does not assume equal computation for 2,000 and 10,000 updates.
+
+## Classification extension: p4jQ W4
+
+**File:** `results/figures/classification.pdf`
+
+**Caption:** Test accuracy on the official held-out UCI HAR subjects with a fixed temporal CNN. Training and validation subjects are disjoint. A separate initializer is calibrated only within the target training subjects. The four population arms each receive a 30-second target cap and 20 validation calls; the AdamW reference receives 1,500 updates and is not time matched. Dots show ten seeds and diamonds/error bars show means/sample standard deviations.
+
+## OpenReview use
+
+OpenReview's Markdown documentation excludes embedded images and inline HTML. Use the tables in the comment bodies and provide the figures through the accompanying repository or an allowed revised supplement. Keep the figure's caption and its budget definition together when inserting it into the manuscript.
+
+Source: https://docs.openreview.net/how-to-guides/submissions-comments-reviews-and-decisions/how-to-add-formatting-to-reviews-or-comments

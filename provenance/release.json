@@ -1,0 +1,23 @@
+{
+  "recorded_core_sha256": "2b2f152fc3dc80abf104c25c41cd4ac03d30ef4b795d7df774ca6a2654a266d3",
+  "released_core_sha256": "6f99f8d40298039e5412832936438530481d5b726e5c2ce9864d14a107aab480",
+  "hash_definition": "SHA256 of each sorted roam/*.py basename (UTF-8), followed by that file byte content.",
+  "archived_source": "provenance/recorded_core/roam",
+  "changed_files": [
+    "roam/train.py"
+  ],
+  "change": "Correct population_fit documentation: a wall-clock budget uses time-spaced evaluation rounds, overriding the fixed-update interval.",
+  "executable_ast_identical_after_docstring_removal": true,
+  "raw_result_hashes_preserved": true,
+  "recorded_files": {
+    "__init__.py": "9b479faec34994ef352037539bae3c53ddd5ffd754cc103eb185eec17beb1cb4",
+    "backbones.py": "235366d53d46631a17eecd19916210e261c2d8d11e8d5e81f9ca9ea3052eb591",
+    "classification.py": "ad2f818f17c11a7f4cf2c4d58aeacdd5b7b7523ba947dfa1e59042ac0a700164",
+    "controls.py": "410441860369876aeda3536a3fdb8e3b47e40d6e4d5dd638974eea0c8f9ba935",
+    "data.py": "08bff6af82bf50380f9f251b46517c411500fd01131c5140ffd084a2eb2bd1b4",
+    "descriptors.py": "3edd42b7105f9c0af414183d4b4025ee5e628d0db60457b4640b6a6489778e68",
+    "models.py": "9dbbab4b4b81b7a54af856d47392698af0f9fecb76fbbbfd539da73dc389f307",
+    "optimizer.py": "9a888c2ef678aa2162f6d369e7d5945147453bd508991d2e37db089b0f4b9f24",
+    "train.py": "73abaeabd3c41a5ca605ebde6c6dc433d330a6338e3913ffb24e39bf44ddaee4"
+  }
+}

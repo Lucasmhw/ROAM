@@ -1,0 +1,51 @@
+% Manuscript-ready figure fragments. Requires \usepackage{graphicx}.
+% These use ordinary LaTeX escaping, unlike the OpenReview Markdown bodies.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.85\linewidth]{figures/Figure6_Table20_consistent.pdf}
+  \caption{Relative MSE reductions for the four source--target pairs individually reported in Table 20. Each entry is computed as $100(\mathrm{MSE}_{\mathrm{standard}}-\mathrm{MSE}_{\mathrm{ROAM}})/\mathrm{MSE}_{\mathrm{standard}}$ from the displayed table values. Rows identify sources and columns identify targets. Gray cells denote pairs not individually reported in Table 20. The 12-transfer aggregate is a separate statistic and is not plotted here.}
+  \label{fig:table20-consistent-transfer}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/Table20_pairwise_MSE.pdf}
+  \caption{Paired MSE values for the four source--target settings individually reported in Table 20. Both bars and the corresponding relative-reduction plot are generated from the same explicit table-derived records. This plot describes the manuscript-reported aggregates; it does not reconstruct historical per-seed observations.}
+  \label{fig:table20-paired-mse}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/control_transfer.pdf}
+  \caption{Transfer of source-fitted optimizer initialization to ETTh2 and ETTm2, excluded from source calibration. Each target predictor is trained afresh with DLinear, context/horizon 96/96, four population members, a 20-second training/validation cap, and 20 model-level validation calls. Dots show ten reporting seeds; diamonds and error bars show the mean and sample standard deviation. Source calibration is an additional cost, reported separately. Checkpoints are selected using validation only.}
+  \label{fig:initializer-control-transfer}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/phase_policy.pdf}
+  \caption{Discrete switching, the specified continuous blend, and Phase I alone under the same task initializer, metric, four-member population, 20-second target cap, and five evaluation rounds. Top: test MSE, with dots for individual runs and diamonds/error bars for means/sample standard deviations over ten seeds. Bottom: the best validation MSE found among all members up to each population round, with lines/bands for means/sample standard deviations. The horizontal axis denotes evaluation rounds. The continuous arm uses the stated disagreement/curvature weighting rule and the same curvature-pair and line-search safeguards. The comparison concerns one explicit continuous policy.}
+  \label{fig:phase-policy-control}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/dlinear_validation_trajectories.pdf}
+  \caption{DLinear validation trajectories for the same unregularized squared-error objective. Both learning rates are selected from the same five-candidate validation grid with a separate selection seed. ROAM is run for 2,000 updates and AdamW for 10,000. Lines and shaded regions show means and sample standard deviations over ten seeds. The dashed reference is the validation MSE of the exact training least-squares solution, which need not minimize validation risk.}
+  \label{fig:dlinear-validation-trajectories}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/dlinear_training_objective.pdf}
+  \caption{Final full-training MSE for DLinear at four ETTh2 horizons and ETTm2-96, with zero weight decay for all stochastic runs. Points and error bars show means and sample standard deviations over ten seeds. The dashed line is the float64 least-squares minimum in the equivalent identifiable affine predictor family. Final training loss is distinct from validation-selected test performance; the 2,000- and 10,000-update arms have different computation budgets.}
+  \label{fig:dlinear-training-objective}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/classification.pdf}
+  \caption{Test accuracy on the official held-out UCI HAR subjects with a fixed temporal CNN. Training and validation subjects are disjoint. A separate initializer is calibrated only within the target training subjects. Each population arm receives a 30-second target cap and 20 validation calls; the AdamW reference receives 1,500 updates and is not time matched. Dots show ten seeds; diamonds and error bars show means and sample standard deviations.}
+  \label{fig:har-classification-control}
+\end{figure}

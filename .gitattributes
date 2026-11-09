@@ -1,0 +1,2 @@
+# Preserve exact bytes for experiment source hashes and FILE_MANIFEST.
+* -text
