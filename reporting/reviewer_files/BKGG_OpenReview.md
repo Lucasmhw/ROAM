@@ -12,14 +12,14 @@ Title 字段（33 characters）：
 Thank you letter to Reviewer BKGG
 ```
 
-Comment 字段（591 characters，LF；CRLF 为 598）：
+Comment 字段（628 characters，LF；CRLF 为 635）：
 
 ```markdown
 Dear Reviewer BKGG,
 
 Thank you for identifying the presentation details needed to follow the method. We have made the descriptor-to-control relationship explicit, added the source-fitting objective and numerical curvature estimator, and expanded the factorial into an eight-row configuration table with named task–backbone settings.
 
-Figure 1 now traces source calibration, target descriptors, online model derivatives, and validation adaptation separately. The responses below address each of your three concerns and point to the revised definitions and evidence.
+Figure 1 gives the system overview, and Figure 10 traces source calibration, target descriptors, online model derivatives, and validation adaptation separately. The responses below address each of your three concerns and point to the revised definitions and evidence.
 
 Best regards,
 The Authors
@@ -37,7 +37,7 @@ Title 字段（105 characters）：
 Response to Weakness 1 and the corresponding Question: why temporal statistics can inform metric controls
 ```
 
-Comment 字段（2225 characters，LF；CRLF 为 2241）：
+Comment 字段（2182 characters，LF；CRLF 为 2198）：
 
 ```markdown
 Thank you for asking why data-level descriptors can be relevant to parameter-space optimization. Sections 3.1–3.2 now separate the motivation for conditioning from the model-dependent curvature construction.
@@ -56,7 +56,7 @@ $$
 $$
 where $s_i$ is the source-feature scale. This expresses the direction and local sensitivity of a control to each descriptor; it is not a theorem that the resulting metric must align with curvature.
 
-The empirical evidence tests separate links. Random descriptors give .328 mean MSE versus .312 for the six descriptors; removing individual descriptors gives .315–.319. The new source-mean/direct-search experiment in Section 5.4 isolates task-specific initialization within the same metric family. Figure 4 then compares the realized positive-spectrum conditioning at the same initial model state. This connects interpretable inputs, model-dependent operators, and observed behavior without assuming that six scalars reconstruct a Hessian.
+The empirical evidence tests separate links. Random descriptors give .328 mean MSE versus .312 for the six descriptors; removing individual descriptors gives .315–.319. The new source-mean/direct-search experiment in Section 5.4 isolates task-specific initialization within the same metric family. Figure 4 then compares the realized positive-spectrum conditioning at the same initial model state. This connects interpretable inputs, model-dependent operators, and observed optimization behavior.
 ```
 
 **END BKGG_01 — 下一条请新建独立回复**

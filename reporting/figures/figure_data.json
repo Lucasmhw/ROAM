@@ -86,7 +86,14 @@
     ],
     "source_seconds": 600,
     "target_seconds": 20,
-    "coldstart_direct_mse": 0.303
+    "coldstart_direct_mse": 0.303,
+    "target_reporting_seeds": 10,
+    "coldstart_reporting_seeds": 3,
+    "coldstart_seed_ids": [
+      0,
+      1,
+      2
+    ]
   },
   "convex": {
     "status": "Completed supplementary experiment; reported aggregate measurements.",
@@ -349,10 +356,14 @@
       385,
       390,
       375
-    ]
+    ],
+    "reporting_seeds": 10,
+    "aggregation": "Arithmetic mean of per-seed positive-spectrum ratios.",
+    "metric_estimation": "Shared initial weights and training batch of 64 windows within each seed; two probes; initial gradient second moment zero.",
+    "diagnostic_operator": "Exact full-training unregularized DLinear Hessian."
   },
   "factorial": {
-    "status": "transcribed rounded Table 3 entries; original active-control and constraint metadata require verification",
+    "status": "Rounded original factorial table entries; named settings and active configurations are specified in the revised manuscript.",
     "rows": [
       [
         0,
@@ -413,6 +424,7 @@
       96
     ],
     "reporting_seeds": 10,
-    "release_date": "2026-11-10"
+    "release_date": "2026-11-10",
+    "reporting_seeds_scope": "Target-adaptation, convex, phase-policy, classification, and curvature comparisons; the calibration-inclusive first-task comparison uses three matched seeds."
   }
 }

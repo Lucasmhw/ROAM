@@ -1,6 +1,6 @@
 # 实验结果、协议与汇总口径
 
-R2–R6 使用已完成的实验结果。Table 13 的设置为 ETTh1-192/iTransformer、ETTm1-336/PatchTST、Weather-192/TimeMixer。以下保留不同实验的独立定义；相同数值在不同协议中不代表同一条运行记录。
+R2–R6 使用已完成的实验结果。原稿 Table 13（修订稿 Table 12）的设置为 ETTh1-192/iTransformer、ETTm1-336/PatchTST、Weather-192/TimeMixer。以下保留不同实验的独立定义；相同数值在不同协议中不代表同一条运行记录。
 
 ## 同预算初始化器比较
 
@@ -12,7 +12,7 @@ DLinear，context/horizon=96/96，四成员，20 秒 target cap，20 次 model-l
 | Source mean | 0.318 ± 0.011 | 0.177 ± 0.005 |
 | Direct search | 0.315 ± 0.012 | 0.173 ± 0.005 |
 
-源校准为 600 秒。source+target subtotal 对 1/10/100 个 target 分别为 620/80/26 秒每任务；不包含加载、descriptor 和最终报告成本。ETTh2-96 的 620 秒 subtotal allocation 比较：direct search .303，conditioned .312。
+源校准为 600 秒。source+target subtotal 对 1/10/100 个 target 分别为 620/80/26 秒每任务；不包含加载、descriptor 和最终报告成本。ETTh2-96 的 620 秒 subtotal allocation 比较：direct search .303，conditioned .312，按 3 个匹配 seeds（0–2）取均值。该首任务比较与上表 10 seeds 的 20 秒目标任务比较分别汇总。
 
 ## DLinear 同目标对照
 
@@ -65,7 +65,7 @@ Accuracy 标准差单位为百分点。四个 population arms 共用 30 秒/20 c
 | Source mean | 720 | 390 |
 | Conditioned | 640 | 375 |
 
-该诊断保留 full parameterization 的零空间，只报告正谱比值。若 identifiable design 满秩，rank 和 nullity 各为 H(T+1)，T=H=96 时为 9,312；条件维数计算与实际数值秩分别陈述。
+表中数值为 10 seeds 的正谱比值均值。每个 seed 内，各度量共用初始权重和一个 64-window 训练 batch；两探针估计初始度量，梯度二阶矩初值为零。正谱诊断使用完整训练集的精确 Hessian。该诊断保留 full parameterization 的零空间，只报告正谱比值。若 identifiable design 满秩，rank 和 nullity 各为 H(T+1)，T=H=96 时为 9,312；条件维数计算与实际数值秩分别陈述。
 
 ## 原稿表格的确定性重算
 

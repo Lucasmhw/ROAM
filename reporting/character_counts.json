@@ -2,17 +2,17 @@
   {
     "id": "00_general",
     "title": 52,
-    "comment_lf": 1991,
-    "comment_crlf": 2004,
-    "combined_crlf": 2056,
+    "comment_lf": 2010,
+    "comment_crlf": 2023,
+    "combined_crlf": 2075,
     "pass": true
   },
   {
     "id": "p4jQ_00",
     "title": 33,
-    "comment_lf": 697,
-    "comment_crlf": 704,
-    "combined_crlf": 737,
+    "comment_lf": 564,
+    "comment_crlf": 571,
+    "combined_crlf": 604,
     "pass": true
   },
   {
@@ -26,9 +26,9 @@
   {
     "id": "p4jQ_02",
     "title": 97,
-    "comment_lf": 2485,
-    "comment_crlf": 2509,
-    "combined_crlf": 2606,
+    "comment_lf": 2538,
+    "comment_crlf": 2562,
+    "combined_crlf": 2659,
     "pass": true
   },
   {
@@ -42,25 +42,25 @@
   {
     "id": "p4jQ_04",
     "title": 89,
-    "comment_lf": 2411,
-    "comment_crlf": 2431,
-    "combined_crlf": 2520,
+    "comment_lf": 2374,
+    "comment_crlf": 2394,
+    "combined_crlf": 2483,
     "pass": true
   },
   {
     "id": "BKGG_00",
     "title": 33,
-    "comment_lf": 591,
-    "comment_crlf": 598,
-    "combined_crlf": 631,
+    "comment_lf": 628,
+    "comment_crlf": 635,
+    "combined_crlf": 668,
     "pass": true
   },
   {
     "id": "BKGG_01",
     "title": 105,
-    "comment_lf": 2225,
-    "comment_crlf": 2241,
-    "combined_crlf": 2346,
+    "comment_lf": 2182,
+    "comment_crlf": 2198,
+    "combined_crlf": 2303,
     "pass": true
   },
   {
@@ -90,17 +90,17 @@
   {
     "id": "esdH_01",
     "title": 84,
-    "comment_lf": 2117,
-    "comment_crlf": 2134,
-    "combined_crlf": 2218,
+    "comment_lf": 2046,
+    "comment_crlf": 2063,
+    "combined_crlf": 2147,
     "pass": true
   },
   {
     "id": "esdH_02",
     "title": 80,
-    "comment_lf": 2505,
-    "comment_crlf": 2525,
-    "combined_crlf": 2605,
+    "comment_lf": 2438,
+    "comment_crlf": 2458,
+    "combined_crlf": 2538,
     "pass": true
   },
   {
@@ -122,9 +122,9 @@
   {
     "id": "esdH_05",
     "title": 79,
-    "comment_lf": 2278,
-    "comment_crlf": 2292,
-    "combined_crlf": 2371,
+    "comment_lf": 2217,
+    "comment_crlf": 2231,
+    "combined_crlf": 2310,
     "pass": true
   },
   {
@@ -146,17 +146,17 @@
   {
     "id": "gg28_01",
     "title": 98,
-    "comment_lf": 2564,
-    "comment_crlf": 2581,
-    "combined_crlf": 2679,
+    "comment_lf": 2767,
+    "comment_crlf": 2784,
+    "combined_crlf": 2882,
     "pass": true
   },
   {
     "id": "gg28_02",
     "title": 85,
-    "comment_lf": 2623,
-    "comment_crlf": 2633,
-    "combined_crlf": 2718,
+    "comment_lf": 2594,
+    "comment_crlf": 2604,
+    "combined_crlf": 2689,
     "pass": true
   },
   {

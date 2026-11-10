@@ -12,7 +12,7 @@ Title 字段（52 characters）：
 Thank you letter to the Area Chair and all reviewers
 ```
 
-Comment 字段（1991 characters，LF；CRLF 为 2004）：
+Comment 字段（2010 characters，LF；CRLF 为 2023）：
 
 ```markdown
 Dear Area Chair and Reviewers,
@@ -25,7 +25,7 @@ The added experiments address the principal attribution questions. Conditioned i
 
 We have corrected the transfer visualization from its four documented table entries, regenerated the descriptor plot on a common aggregation basis, and supplied numerical reporting inputs and figure-generation code. The anonymous implementation and reporting package are available at [ROAM](https://anonymous.4open.science/r/ROAM-D935/).
 
-The broad forecasting results remain strong: lower MSE in all 35 dataset–backbone aggregates, with 4.8%–7.3% lower macro MSE by backbone. The revised presentation distinguishes those observations from the stronger optimizer comparisons, the targeted controls, and the conditional mathematical analysis. We hope these concrete changes make the contribution and its limits easier to assess.
+The broad forecasting results remain strong: lower MSE in all 35 dataset–backbone aggregates, with 4.8%–7.3% lower macro MSE by backbone. The revised presentation distinguishes those observations from the stronger optimizer comparisons, the targeted controls, and the conditional mathematical analysis. Together, these comparisons connect forecasting performance to specific, inspectable training decisions.
 
 Best regards,
 The Authors
@@ -43,14 +43,14 @@ Title 字段（33 characters）：
 Thank you letter to Reviewer p4jQ
 ```
 
-Comment 字段（697 characters，LF；CRLF 为 704）：
+Comment 字段（564 characters，LF；CRLF 为 571）：
 
 ```markdown
 Dear Reviewer p4jQ,
 
 Thank you for recognizing the value of task-aware optimization and for identifying the implementation and attribution details needed to assess it. We have addressed your four concerns in the revised manuscript: the initializer fit and descriptor–geometry connection, direct metric search under defined budgets, the stored curvature representation and solve, and an explicit temporal-classification extension.
 
-The responses below give the results and point to the corresponding sections. We have retained the distinction between improved mean performance in a particular comparison and a universal advantage over alternative optimization strategies.
+The responses below give the measured outcomes, comparison budgets, and corresponding manuscript sections.
 
 Best regards,
 The Authors
@@ -102,7 +102,7 @@ Title 字段（97 characters）：
 Response to Weakness 2 and the corresponding Question: direct metric search under matched budgets
 ```
 
-Comment 字段（2485 characters，LF；CRLF 为 2509）：
+Comment 字段（2538 characters，LF；CRLF 为 2562）：
 
 ```markdown
 Thank you for proposing direct search over the metric parameters. We have added this comparison in Section 5.4, Figure 3, and Appendix L.1.
@@ -127,9 +127,9 @@ Conditioning improves on source mean on both targets. Direct search is slightly 
 $$
 \\overline C(N)=C_{\\mathrm{source}}/N+C_{\\mathrm{descriptor}}+C_{\\mathrm{target}}.
 $$
-Under an equal 620-second subtotal allocation on ETTh2-96, direct search obtains .303 versus .312 for conditioning. We report this outcome explicitly: direct search is stronger in that cold-start comparison, while source calibration can be shared across repeated deployments.
+Under an equal 620-second subtotal allocation on ETTh2-96, direct search obtains .303 versus .312 for conditioning, averaged over the three matched seeds 0–2. These are separate from the ten-seed target comparison above. Direct search is stronger in this first-task comparison, while source calibration can be shared across repeated deployments.
 
-The revision distinguishes a matched target-adaptation budget from a first-task efficiency claim. Source mean is also informative because it retains calibration investment while removing task-specific initialization. Neither a scalar-learning-rate search nor identity plus PBT would isolate these questions as directly.
+Source mean retains calibration investment while removing task-specific initialization; direct search tests the same metric family under either the target cap or the calibration-inclusive allocation. These controls separate the value of task information from the compute invested in selecting controls.
 ```
 
 **END p4jQ_02 — 下一条请新建独立回复**
@@ -182,7 +182,7 @@ Title 字段（89 characters）：
 Response to Weakness 4 and the corresponding Question: a defined classification extension
 ```
 
-Comment 字段（2411 characters，LF；CRLF 为 2431）：
+Comment 字段（2374 characters，LF；CRLF 为 2394）：
 
 ```markdown
 Thank you for suggesting evaluation beyond regression. We have added a subject-disjoint UCI HAR classification extension in Appendix L.5, Table 26, and Figure 16, with a main-text summary in Section 5.7.
@@ -205,7 +205,7 @@ The implementation estimates its nonnegative diagonal using sampled softmax labe
 | Continuous blend | 92.9 +/- .6 | .212 +/- .018 | 30 s / 20 calls |
 | AdamW reference | 93.5 +/- .5 | .194 +/- .016 | 1,500 updates |
 
-Conditioning improves over source mean in both metrics, while direct search and blending have higher mean accuracy. The separately budgeted AdamW reference is also stronger. The extension demonstrates that the loss interface and descriptor convention are usable for temporal classification; it does not establish the best classification optimizer or universal cross-domain transfer. The source tasks here are internal subject splits, not an external meta-training corpus.
+Conditioning improves over source mean in both metrics, while direct search and blending have higher mean accuracy. The separately budgeted AdamW reference is also stronger. The extension demonstrates the loss interface and descriptor convention on temporal classification, using internal subject splits for calibration. Its scope is this dataset and classifier; the table identifies the stronger reference outcomes and their budgets.
 ```
 
 **END p4jQ_04 — 下一条请新建独立回复**
@@ -220,14 +220,14 @@ Title 字段（33 characters）：
 Thank you letter to Reviewer BKGG
 ```
 
-Comment 字段（591 characters，LF；CRLF 为 598）：
+Comment 字段（628 characters，LF；CRLF 为 635）：
 
 ```markdown
 Dear Reviewer BKGG,
 
 Thank you for identifying the presentation details needed to follow the method. We have made the descriptor-to-control relationship explicit, added the source-fitting objective and numerical curvature estimator, and expanded the factorial into an eight-row configuration table with named task–backbone settings.
 
-Figure 1 now traces source calibration, target descriptors, online model derivatives, and validation adaptation separately. The responses below address each of your three concerns and point to the revised definitions and evidence.
+Figure 1 gives the system overview, and Figure 10 traces source calibration, target descriptors, online model derivatives, and validation adaptation separately. The responses below address each of your three concerns and point to the revised definitions and evidence.
 
 Best regards,
 The Authors
@@ -245,7 +245,7 @@ Title 字段（105 characters）：
 Response to Weakness 1 and the corresponding Question: why temporal statistics can inform metric controls
 ```
 
-Comment 字段（2225 characters，LF；CRLF 为 2241）：
+Comment 字段（2182 characters，LF；CRLF 为 2198）：
 
 ```markdown
 Thank you for asking why data-level descriptors can be relevant to parameter-space optimization. Sections 3.1–3.2 now separate the motivation for conditioning from the model-dependent curvature construction.
@@ -264,7 +264,7 @@ $$
 $$
 where $s_i$ is the source-feature scale. This expresses the direction and local sensitivity of a control to each descriptor; it is not a theorem that the resulting metric must align with curvature.
 
-The empirical evidence tests separate links. Random descriptors give .328 mean MSE versus .312 for the six descriptors; removing individual descriptors gives .315–.319. The new source-mean/direct-search experiment in Section 5.4 isolates task-specific initialization within the same metric family. Figure 4 then compares the realized positive-spectrum conditioning at the same initial model state. This connects interpretable inputs, model-dependent operators, and observed behavior without assuming that six scalars reconstruct a Hessian.
+The empirical evidence tests separate links. Random descriptors give .328 mean MSE versus .312 for the six descriptors; removing individual descriptors gives .315–.319. The new source-mean/direct-search experiment in Section 5.4 isolates task-specific initialization within the same metric family. Figure 4 then compares the realized positive-spectrum conditioning at the same initial model state. This connects interpretable inputs, model-dependent operators, and observed optimization behavior.
 ```
 
 **END BKGG_01 — 下一条请新建独立回复**
@@ -385,7 +385,7 @@ Title 字段（84 characters）：
 Response to Weakness 1, part 1: transfer-cell consistency and aggregation provenance
 ```
 
-Comment 字段（2117 characters，LF；CRLF 为 2134）：
+Comment 字段（2046 characters，LF；CRLF 为 2063）：
 
 ```markdown
 Thank you for identifying the cell-wise inconsistency. You are correct: the distinction between a 12-transfer mean and displayed cells cannot explain different values for the same named source–target pair.
@@ -399,13 +399,13 @@ Thank you for identifying the cell-wise inconsistency. You are correct: the dist
 | Weather to ECL | .201 | .189 | 5.97% |
 | ECL to Exchange | .462 | .437 | 5.41% |
 
-Each percentage is $100(1-\\mathrm{MSE}_R/\\mathrm{MSE}_B)$. The other cells are marked NR, not zero. The 12-transfer aggregate remains separate; its .342/.322 pair does not determine the eight unreported individual pairs. The correction reconciles the displayed figure with the table without inventing those observations or assigning a speculative internal cause to the old plot.
+Each percentage is $100(1-\\mathrm{MSE}_R/\\mathrm{MSE}_B)$. The other cells are marked NR, not zero. The 12-transfer aggregate remains separate; its .342/.322 pair does not determine the eight unreported individual pairs. The corrected figure and table now use the same keyed observations and arithmetic.
 
 **Aggregation is now explicit.** The Weather-192/TimeMixer value .232 in Table 2 is horizon-specific, whereas .232 in Table 9 averages four horizons. Equality after three-decimal rounding is possible, but the scopes must remain distinct. The revision labels them separately and gives the macro-aggregation formula in Appendix E. The supplied reporting inputs preserve each scope rather than reconstructing individual horizons from a mean. Lion .243 and the standard-recipe .245 also refer to different optimizer summaries.
 
 **Backbone labels are complete.** Table 12 now names ETTh1-192/iTransformer, ETTm1-336/PatchTST, and Weather-192/TimeMixer. The 192-versus-96 difference between its setting A and tournament setting A is explicit.
 
-We also regenerated Figure 13 from Table 14 using the common reference .312. The reporting package includes the numerical inputs and plotting code, and Appendix L.6 maps experiments to artifacts. These are deterministic consistency corrections; the main forecasting claim continues to rest on the 35 dataset–backbone benchmark cells and the separately identified optimizer controls.
+We also regenerated Figure 13 from Table 14 using the common reference .312. The reporting package includes the numerical inputs and plotting code, and Appendix L.6 maps experiments to artifacts. These corrections align the visual presentation with its numerical sources. The forecasting comparison spans 35 dataset–backbone aggregates and four separately identified optimizer settings.
 ```
 
 **END esdH_01 — 下一条请新建独立回复**
@@ -420,7 +420,7 @@ Title 字段（80 characters）：
 Response to Weakness 1, part 2: anonymous code and a reproducible evidence trail
 ```
 
-Comment 字段（2505 characters，LF；CRLF 为 2525）：
+Comment 字段（2438 characters，LF；CRLF 为 2458）：
 
 ```markdown
 Thank you for emphasizing reproducibility. The revised Reproducibility Statement and Appendix L.6 now link the [anonymous ROAM repository](https://anonymous.4open.science/r/ROAM-D935/) and map the implementation to the results.
@@ -439,11 +439,11 @@ The release contains the ordinary-parameter optimizer, descriptor construction, 
 
 The reporting package additionally provides the completed experimental summaries, `reporting/figures/figure_data.json`, the figure generator, and the revised responses. The added numerical plots are generated from that common reporting data. The four transfer gains and descriptor percentages are recomputed directly from the stated rounded table entries.
 
-The release distinguishes reporting summaries from generated training artifacts. Running the documented experiment commands produces per-run records, fitted coefficients, checkpoints, and logs under `results/`; these are different artifacts from the supplied aggregate tables. The optional adapters for four additional forecasting backbones are integration entry points, not a claim that their smoke tests reproduce the full benchmark.
+The release distinguishes reporting summaries from generated training artifacts. Running the documented experiment commands produces per-run records, fitted coefficients, checkpoints, and logs under `results/`; these are different artifacts from the supplied aggregate tables. The optional adapters for four additional forecasting backbones provide integration entry points; their smoke tests check those interfaces.
 
 Appendix D.3 specifies the supplementary environment, model blocks, source/target split, loss normalization, refresh/reset policy, population accounting, and checkpoint selection. The target cap counts all members, probes, diagnostics, line searches, and validation, while source fitting and other excluded costs have separate scopes. A plateau-time figure is not used as a population-wide compute ledger.
 
-These additions make the implementation and the arithmetic behind the displayed results inspectable. We have not inferred per-seed records or paired significance from marginal summary statistics, and the revised manuscript does not use the presence of source code as a substitute for identifying which result each protocol produces.
+The evidence map links each displayed result to its task configuration, comparison budget, aggregation rule, and implementation entry point. Numerical summaries support the reported mean comparisons; per-run records and checkpoints are the outputs of the documented training commands.
 ```
 
 **END esdH_02 — 下一条请新建独立回复**
@@ -531,7 +531,7 @@ Title 字段（79 characters）：
 Response to Weakness 3: the conditional scope and purpose of the local analysis
 ```
 
-Comment 字段（2278 characters，LF；CRLF 为 2292）：
+Comment 字段（2217 characters，LF；CRLF 为 2231）：
 
 ```markdown
 Thank you for distinguishing valid algebra from applicability. We have revised Section 4 to make the classical attribution and conditional scope as explicit as in Appendix A.
@@ -544,7 +544,7 @@ D^{-1/2}KD^{-1/2}=I+E
 $$
 is singular, so $E$ has eigenvalue $-1$ and $\\nu=\\|E\\|_2\\ge1$. If $D$ is singular, the inverse square root in that expression is not defined. Thus the coupled-block result cannot be applied directly to redundant DLinear or a singular neural-network Hessian.
 
-The sentence you highlighted has been replaced with a conditional interpretation: under the stated positive-definiteness and coupling assumptions, the bound separates within-block alignment from neglected coupling; it does not certify the benchmark partitions. The singular-case argument appears immediately after it in the main text.
+The main text now interprets the bound under its stated positive-definiteness and coupling assumptions: it separates within-block alignment from neglected cross-block coupling. The singular-case argument follows immediately, so applicability is stated alongside the result.
 
 **Damping and positive-spectrum diagnostics.** Damping makes the metric $G$ invertible, not the loss Hessian $K$. The new same-state DLinear diagnostic reports a positive-spectrum ratio while retaining flat directions in the full parameterization. It is labeled as a diagnostic, not as verification of the nondegenerate-minimum theorem. A regularized operator or a subspace convergence theorem would require its own assumptions.
 
@@ -617,16 +617,16 @@ Title 字段（98 characters）：
 Response to Weakness 1 and Question 1: task information, model dependence, and empirical alignment
 ```
 
-Comment 字段（2564 characters，LF；CRLF 为 2581）：
+Comment 字段（2767 characters，LF；CRLF 为 2784）：
 
 ```markdown
-Thank you for distinguishing the conditional alignment result from the mechanism that constructs a metric. Sections 3–4 and Figure 1 now make this separation explicit.
+Thank you for distinguishing the conditional alignment result from the mechanism that constructs a metric. Sections 3–4 and Figure 10 now make this separation explicit.
 
 **Information path.** The descriptor initializes control coordinates. The metric also includes $\\widehat F_b(\\theta)$ and $D_b(\\theta)$ computed from the instantiated model and training loss. For general losses, Gauss–Newton curvature contains both the model Jacobian and output-loss curvature. Initial gradient disagreement is already model-dependent, and the block partition and initializer dimensions follow the backbone. Six scalars are not intended to replace these dependencies.
 
 For a centered linear lag predictor, $K=2\\mathbb E[xx^\\top]$ gives a precise connection between lag covariance and curvature; stationarity connects that covariance to the full spectrum. Spectral summaries can be useful without identifying extreme eigenvalues or eigendirections. Section 3.2 gives the source-fitting objective and the explicit derivative of positive controls with respect to descriptor coordinates.
 
-**What is measured.** Section 5.4 compares conditioned, source-mean, and direct-search initialization within the same model, metric family, and target budget. The same-state diagnostic evaluates metrics at a common initialization and full training design, before different trajectories can confound the comparison.
+**What is measured.** Section 5.4 compares conditioned, source-mean, and direct-search initialization within the same model, metric family, and target budget. For each of ten seeds, the same-state diagnostic uses common initial weights and a shared batch of 64 training windows to estimate the initial metric, with the second-moment term initially zero. It then evaluates each metric against the exact full-training Hessian, before training trajectories diverge. The entries below are means of per-seed positive-spectrum ratios.
 
 | Initial metric | ETTh2-96 positive-spectrum ratio | ETTm2-96 positive-spectrum ratio |
 |---|---:|---:|
@@ -637,7 +637,7 @@ For a centered linear lag predictor, $K=2\\mathbb E[xx^\\top]$ gives a precise c
 
 Figure 4 and Appendix L.3 report this diagnostic without treating the redundant DLinear Hessian as positive definite. With a full-rank identifiable design, the two-map model's positive rank and nullity are each $H(T+1)$, or 9,312 for $T=H=96$. This is a conditional dimension calculation; the ETTh2 design-rank measurement (97 at tolerance $10^{-10}$) is stated separately in the exact-solve experiment.
 
-The lower positive-spectrum ratios support improved geometry on observable directions in these settings. They do not prove the spectral sandwich in Proposition 1 or explain the entire test-error gain. The revised Section 4 attributes the classical result and makes its positive-definiteness/coupling assumptions explicit; it makes no convergence claim for the complete switched, stochastic, population-adapted algorithm. Together, the controls and diagnostics supply a testable bridge without asserting a universal descriptor-to-curvature theorem.
+The lower positive-spectrum ratios support improved geometry on observable directions in these settings. They do not prove the spectral sandwich in Proposition 1 or explain the entire test-error gain. The revised Section 4 attributes the classical result and makes its positive-definiteness/coupling assumptions explicit; it makes no convergence claim for the complete switched, stochastic, population-adapted algorithm. Together, the controls and diagnostics connect the task-conditioned mechanism to measured geometry and prediction.
 ```
 
 **END gg28_01 — 下一条请新建独立回复**
@@ -652,20 +652,20 @@ Title 字段（85 characters）：
 Response to Weakness 2: novelty and the relationship to learned Riemannian optimizers
 ```
 
-Comment 字段（2623 characters，LF；CRLF 为 2633）：
+Comment 字段（2594 characters，LF；CRLF 为 2604）：
 
 ```markdown
 Thank you for requesting a clearer distinction from existing optimizers and learned Riemannian optimization. The revised Section 2 attributes the established ingredients and states the contribution at the level of task-conditioned control.
 
 Gauss–Newton/Fisher preconditioning, second-moment estimation, momentum, L-BFGS, manifold operations, and PBT are not new individually. The revised text cites preconditioned product-manifold metrics by [Gao, Peng, and Yuan](https://arxiv.org/abs/2306.08873), gradient-noise-scale work by [McCandlish et al.](https://arxiv.org/abs/1812.06162), and stochastic quasi-Newton safeguards by [Bollapragada et al.](https://proceedings.mlr.press/v80/bollapragada18a.html).
 
-[Learning to Optimize on Riemannian Manifolds](https://wu-yuwei-bit.github.io/paper/TPAMI2023_Gao_Learning_to_Optimize.pdf) parameterizes a Riemannian optimizer with a recurrent network and trains it through meta-optimization, including an implicit-differentiation scheme. ROAM instead retains a prescribed metric/update family and fits a compact affine map from explicit task statistics to its control coordinates, followed by derivative-free population adaptation. Its source fitting is itself a form of learning; we do not contrast it with learned optimization as if it had no training cost.
+[Learning to Optimize on Riemannian Manifolds](https://wu-yuwei-bit.github.io/paper/TPAMI2023_Gao_Learning_to_Optimize.pdf) parameterizes a Riemannian optimizer with a recurrent network and trains it through meta-optimization, including an implicit-differentiation scheme. ROAM instead retains a prescribed metric/update family and fits a compact affine map from explicit task statistics to its control coordinates, followed by derivative-free population adaptation. Source fitting is itself a learned stage, with its calibration cost explicitly included in the first-task comparison and amortized analysis.
 
 The practical distinction is inspectability. Descriptor inputs have stated data dependencies; control coordinates have meanings such as block scale, damping, curvature mixture, and phase threshold; the realized metric also uses current model derivatives. Section 3.2 now gives the fit and descriptor-to-control sensitivity. Individual descriptor removal, removal of the descriptor term while retaining the source intercept, and direct search over the same family are explicit interventions on this interface.
 
 The original factorial reports the largest mean marginal effect for the metric (.01025 versus .00475 for switching and .00525 for outer adaptation). The added source-mean/direct-search results further delimit the role of task information: conditioning improves on source mean on both forecasting targets, but direct search can match or exceed it and is stronger in the first-task cost comparison.
 
-Thus our contribution is a transparent task-conditioning mechanism for forecasting optimization, supported by competitive prediction results and controlled attribution tests. The revision does not claim that all metric ingredients are novel or that this interface universally outperforms recurrent learned optimizers. A direct matched evaluation against such optimizers would answer a separate empirical question.
+Thus our contribution is a transparent task-conditioning mechanism for forecasting optimization, supported by competitive prediction results and controlled attribution tests. The comparison with recurrent learned optimizers concerns the parameterized interface and learning procedure; empirical performance comparisons are restricted to the optimizers actually evaluated.
 ```
 
 **END gg28_02 — 下一条请新建独立回复**

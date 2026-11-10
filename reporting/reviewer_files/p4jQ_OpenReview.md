@@ -12,14 +12,14 @@ Title 字段（33 characters）：
 Thank you letter to Reviewer p4jQ
 ```
 
-Comment 字段（697 characters，LF；CRLF 为 704）：
+Comment 字段（564 characters，LF；CRLF 为 571）：
 
 ```markdown
 Dear Reviewer p4jQ,
 
 Thank you for recognizing the value of task-aware optimization and for identifying the implementation and attribution details needed to assess it. We have addressed your four concerns in the revised manuscript: the initializer fit and descriptor–geometry connection, direct metric search under defined budgets, the stored curvature representation and solve, and an explicit temporal-classification extension.
 
-The responses below give the results and point to the corresponding sections. We have retained the distinction between improved mean performance in a particular comparison and a universal advantage over alternative optimization strategies.
+The responses below give the measured outcomes, comparison budgets, and corresponding manuscript sections.
 
 Best regards,
 The Authors
@@ -71,7 +71,7 @@ Title 字段（97 characters）：
 Response to Weakness 2 and the corresponding Question: direct metric search under matched budgets
 ```
 
-Comment 字段（2485 characters，LF；CRLF 为 2509）：
+Comment 字段（2538 characters，LF；CRLF 为 2562）：
 
 ```markdown
 Thank you for proposing direct search over the metric parameters. We have added this comparison in Section 5.4, Figure 3, and Appendix L.1.
@@ -96,9 +96,9 @@ Conditioning improves on source mean on both targets. Direct search is slightly 
 $$
 \\overline C(N)=C_{\\mathrm{source}}/N+C_{\\mathrm{descriptor}}+C_{\\mathrm{target}}.
 $$
-Under an equal 620-second subtotal allocation on ETTh2-96, direct search obtains .303 versus .312 for conditioning. We report this outcome explicitly: direct search is stronger in that cold-start comparison, while source calibration can be shared across repeated deployments.
+Under an equal 620-second subtotal allocation on ETTh2-96, direct search obtains .303 versus .312 for conditioning, averaged over the three matched seeds 0–2. These are separate from the ten-seed target comparison above. Direct search is stronger in this first-task comparison, while source calibration can be shared across repeated deployments.
 
-The revision distinguishes a matched target-adaptation budget from a first-task efficiency claim. Source mean is also informative because it retains calibration investment while removing task-specific initialization. Neither a scalar-learning-rate search nor identity plus PBT would isolate these questions as directly.
+Source mean retains calibration investment while removing task-specific initialization; direct search tests the same metric family under either the target cap or the calibration-inclusive allocation. These controls separate the value of task information from the compute invested in selecting controls.
 ```
 
 **END p4jQ_02 — 下一条请新建独立回复**
@@ -151,7 +151,7 @@ Title 字段（89 characters）：
 Response to Weakness 4 and the corresponding Question: a defined classification extension
 ```
 
-Comment 字段（2411 characters，LF；CRLF 为 2431）：
+Comment 字段（2374 characters，LF；CRLF 为 2394）：
 
 ```markdown
 Thank you for suggesting evaluation beyond regression. We have added a subject-disjoint UCI HAR classification extension in Appendix L.5, Table 26, and Figure 16, with a main-text summary in Section 5.7.
@@ -174,7 +174,7 @@ The implementation estimates its nonnegative diagonal using sampled softmax labe
 | Continuous blend | 92.9 +/- .6 | .212 +/- .018 | 30 s / 20 calls |
 | AdamW reference | 93.5 +/- .5 | .194 +/- .016 | 1,500 updates |
 
-Conditioning improves over source mean in both metrics, while direct search and blending have higher mean accuracy. The separately budgeted AdamW reference is also stronger. The extension demonstrates that the loss interface and descriptor convention are usable for temporal classification; it does not establish the best classification optimizer or universal cross-domain transfer. The source tasks here are internal subject splits, not an external meta-training corpus.
+Conditioning improves over source mean in both metrics, while direct search and blending have higher mean accuracy. The separately budgeted AdamW reference is also stronger. The extension demonstrates the loss interface and descriptor convention on temporal classification, using internal subject splits for calibration. Its scope is this dataset and classifier; the table identifies the stronger reference outcomes and their budgets.
 ```
 
 **END p4jQ_04 — 下一条请新建独立回复**

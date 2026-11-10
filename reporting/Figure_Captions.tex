@@ -1,9 +1,9 @@
 % FigureR1_information_flow
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{figures/FigureR1_information_flow.pdf}
 \caption{\rev{Information flow in the task-conditioned controller.} Source validation selects controls used to fit the initializer. On a target task, descriptors initialize controls, current model derivatives form the metric, and target validation selects population updates and checkpoints. Test targets enter only final evaluation.}
-\label{fig:model}
+\label{fig:source-flow}
 \end{figure}
 
 % FigureR2_control_and_cost
@@ -42,7 +42,7 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/FigureR6_curvature_diagnostic.pdf}
-\caption{\rev{Positive-spectrum conditioning at the same initial model state.} All metrics use the same full training design. Flat directions remain in the parameterization; the reported ratios concern positive eigenvalues only and are not a full-Hessian alignment certificate.}
+\caption{\rev{Positive-spectrum conditioning at initialization.} \rev{Means over ten seeds.} Within each seed, metrics share the model state and estimation batch; ratios use the exact full-training Hessian. Flat directions remain outside the positive-spectrum ratio.}
 \label{fig:curvature}
 \end{figure}
 

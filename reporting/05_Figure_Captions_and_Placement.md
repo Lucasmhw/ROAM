@@ -2,7 +2,7 @@
 
 | 文件 stem | 修订图号 | PDF页码 | 位置 |
 |---|---|---|---|
-| FigureR1_information_flow | 1 | 3 | 正文 |
+| FigureR1_information_flow | 10 | 30 | 附录 |
 | FigureR2_control_and_cost | 3 | 8 | 正文 |
 | FigureR3_dlinear_convergence | 5 | 10 | 正文 |
 | FigureR4_phase_policy | 15 | 40 | 附录 |

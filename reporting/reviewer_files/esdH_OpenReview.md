@@ -37,7 +37,7 @@ Title 字段（84 characters）：
 Response to Weakness 1, part 1: transfer-cell consistency and aggregation provenance
 ```
 
-Comment 字段（2117 characters，LF；CRLF 为 2134）：
+Comment 字段（2046 characters，LF；CRLF 为 2063）：
 
 ```markdown
 Thank you for identifying the cell-wise inconsistency. You are correct: the distinction between a 12-transfer mean and displayed cells cannot explain different values for the same named source–target pair.
@@ -51,13 +51,13 @@ Thank you for identifying the cell-wise inconsistency. You are correct: the dist
 | Weather to ECL | .201 | .189 | 5.97% |
 | ECL to Exchange | .462 | .437 | 5.41% |
 
-Each percentage is $100(1-\\mathrm{MSE}_R/\\mathrm{MSE}_B)$. The other cells are marked NR, not zero. The 12-transfer aggregate remains separate; its .342/.322 pair does not determine the eight unreported individual pairs. The correction reconciles the displayed figure with the table without inventing those observations or assigning a speculative internal cause to the old plot.
+Each percentage is $100(1-\\mathrm{MSE}_R/\\mathrm{MSE}_B)$. The other cells are marked NR, not zero. The 12-transfer aggregate remains separate; its .342/.322 pair does not determine the eight unreported individual pairs. The corrected figure and table now use the same keyed observations and arithmetic.
 
 **Aggregation is now explicit.** The Weather-192/TimeMixer value .232 in Table 2 is horizon-specific, whereas .232 in Table 9 averages four horizons. Equality after three-decimal rounding is possible, but the scopes must remain distinct. The revision labels them separately and gives the macro-aggregation formula in Appendix E. The supplied reporting inputs preserve each scope rather than reconstructing individual horizons from a mean. Lion .243 and the standard-recipe .245 also refer to different optimizer summaries.
 
 **Backbone labels are complete.** Table 12 now names ETTh1-192/iTransformer, ETTm1-336/PatchTST, and Weather-192/TimeMixer. The 192-versus-96 difference between its setting A and tournament setting A is explicit.
 
-We also regenerated Figure 13 from Table 14 using the common reference .312. The reporting package includes the numerical inputs and plotting code, and Appendix L.6 maps experiments to artifacts. These are deterministic consistency corrections; the main forecasting claim continues to rest on the 35 dataset–backbone benchmark cells and the separately identified optimizer controls.
+We also regenerated Figure 13 from Table 14 using the common reference .312. The reporting package includes the numerical inputs and plotting code, and Appendix L.6 maps experiments to artifacts. These corrections align the visual presentation with its numerical sources. The forecasting comparison spans 35 dataset–backbone aggregates and four separately identified optimizer settings.
 ```
 
 **END esdH_01 — 下一条请新建独立回复**
@@ -72,7 +72,7 @@ Title 字段（80 characters）：
 Response to Weakness 1, part 2: anonymous code and a reproducible evidence trail
 ```
 
-Comment 字段（2505 characters，LF；CRLF 为 2525）：
+Comment 字段（2438 characters，LF；CRLF 为 2458）：
 
 ```markdown
 Thank you for emphasizing reproducibility. The revised Reproducibility Statement and Appendix L.6 now link the [anonymous ROAM repository](https://anonymous.4open.science/r/ROAM-D935/) and map the implementation to the results.
@@ -91,11 +91,11 @@ The release contains the ordinary-parameter optimizer, descriptor construction, 
 
 The reporting package additionally provides the completed experimental summaries, `reporting/figures/figure_data.json`, the figure generator, and the revised responses. The added numerical plots are generated from that common reporting data. The four transfer gains and descriptor percentages are recomputed directly from the stated rounded table entries.
 
-The release distinguishes reporting summaries from generated training artifacts. Running the documented experiment commands produces per-run records, fitted coefficients, checkpoints, and logs under `results/`; these are different artifacts from the supplied aggregate tables. The optional adapters for four additional forecasting backbones are integration entry points, not a claim that their smoke tests reproduce the full benchmark.
+The release distinguishes reporting summaries from generated training artifacts. Running the documented experiment commands produces per-run records, fitted coefficients, checkpoints, and logs under `results/`; these are different artifacts from the supplied aggregate tables. The optional adapters for four additional forecasting backbones provide integration entry points; their smoke tests check those interfaces.
 
 Appendix D.3 specifies the supplementary environment, model blocks, source/target split, loss normalization, refresh/reset policy, population accounting, and checkpoint selection. The target cap counts all members, probes, diagnostics, line searches, and validation, while source fitting and other excluded costs have separate scopes. A plateau-time figure is not used as a population-wide compute ledger.
 
-These additions make the implementation and the arithmetic behind the displayed results inspectable. We have not inferred per-seed records or paired significance from marginal summary statistics, and the revised manuscript does not use the presence of source code as a substitute for identifying which result each protocol produces.
+The evidence map links each displayed result to its task configuration, comparison budget, aggregation rule, and implementation entry point. Numerical summaries support the reported mean comparisons; per-run records and checkpoints are the outputs of the documented training commands.
 ```
 
 **END esdH_02 — 下一条请新建独立回复**
@@ -183,7 +183,7 @@ Title 字段（79 characters）：
 Response to Weakness 3: the conditional scope and purpose of the local analysis
 ```
 
-Comment 字段（2278 characters，LF；CRLF 为 2292）：
+Comment 字段（2217 characters，LF；CRLF 为 2231）：
 
 ```markdown
 Thank you for distinguishing valid algebra from applicability. We have revised Section 4 to make the classical attribution and conditional scope as explicit as in Appendix A.
@@ -196,7 +196,7 @@ D^{-1/2}KD^{-1/2}=I+E
 $$
 is singular, so $E$ has eigenvalue $-1$ and $\\nu=\\|E\\|_2\\ge1$. If $D$ is singular, the inverse square root in that expression is not defined. Thus the coupled-block result cannot be applied directly to redundant DLinear or a singular neural-network Hessian.
 
-The sentence you highlighted has been replaced with a conditional interpretation: under the stated positive-definiteness and coupling assumptions, the bound separates within-block alignment from neglected coupling; it does not certify the benchmark partitions. The singular-case argument appears immediately after it in the main text.
+The main text now interprets the bound under its stated positive-definiteness and coupling assumptions: it separates within-block alignment from neglected cross-block coupling. The singular-case argument follows immediately, so applicability is stated alongside the result.
 
 **Damping and positive-spectrum diagnostics.** Damping makes the metric $G$ invertible, not the loss Hessian $K$. The new same-state DLinear diagnostic reports a positive-spectrum ratio while retaining flat directions in the full parameterization. It is labeled as a diagnostic, not as verification of the nondegenerate-minimum theorem. A regularized operator or a subspace convergence theorem would require its own assumptions.
 
