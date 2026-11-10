@@ -15,7 +15,7 @@ Run the last command from the repository root. For a standalone copy of this pac
 
 | Figure file | Content | Revised manuscript |
 |---|---|---|
-| FigureR1_information_flow | Descriptor, source fitting, and target-training interfaces | Figure 1 |
+| FigureR1_information_flow | Descriptor, source fitting, and target-training interfaces | Figure 10 |
 | FigureR2_control_and_cost | Conditioned, source-mean, and direct-search controls; calibration cost | Figure 3 |
 | FigureR3_dlinear_convergence | Fixed-objective DLinear convergence and validation trajectories | Figure 5 |
 | FigureR4_phase_policy | Discrete switching, continuous blending, and Phase I | Figure 15 |
@@ -37,6 +37,8 @@ The reporting inputs preserve the reported aggregate measurements. Per-run train
 
 ## Responses
 
-[`01_ROAM_OpenReview_Rebuttal.md`](01_ROAM_OpenReview_Rebuttal.md) contains all 21 response blocks; [`reviewer_files/`](reviewer_files/) separates them by reviewer. The references match the revised manuscript. Run `python reporting/check_openreview_lengths.py` from the repository root to check the actual Title and Comment fields after editing.
+[`01_ROAM_OpenReview_Rebuttal.md`](01_ROAM_OpenReview_Rebuttal.md) contains 15 response blocks: one general response, four for p4jQ, three for BKGG, four for esdH, and three for gg28. Thanks are integrated into each reviewer's first response. Seven key experimental tables appear directly in the replies; other evidence is linked to specific revised-paper locations using a single bold-underlined style. Relevant references appear at the end of the corresponding response. [`reviewer_files/`](reviewer_files/) separates the same text by reviewer. Run `python reporting/check_openreview_lengths.py` from the repository root to check the actual Title and Comment fields after editing.
 
 [`05_Figure_Captions_and_Placement.md`](05_Figure_Captions_and_Placement.md) records figure numbering and PDF page locations. [`Figure_Captions.tex`](Figure_Captions.tex) contains the corresponding source snippets.
+
+[`06_Reply_Reading_View.html`](06_Reply_Reading_View.html) provides a browser reading view with per-response selection and separate Title/Comment copy buttons. Its math-rendering libraries load from a CDN. The Markdown file remains the source for pasting into OpenReview.
