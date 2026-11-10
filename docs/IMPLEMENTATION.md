@@ -1,6 +1,6 @@
 # Numerical specification
 
-This repository implements the ordinary-parameter ROAM mechanism and supplies the supplementary experiments used in the response. The manuscript defines a family of metric operators but does not identify the original initializer coefficients, reference population, curvature storage scheme, or original run artifacts. The choices below specify the implementation used for the runs in this repository. They should not be interpreted as recovered provenance for the manuscript's benchmark tables.
+This repository implements the ordinary-parameter ROAM mechanism and supplies the supplementary experiments used in the revised manuscript and responses. The choices below specify source-task fitting, descriptor normalization, diagonal curvature storage, metric solves, and population budgets. Completed numerical summaries and figure-generation inputs are released in `reporting/`; the original benchmark aggregates have their separately stated experimental scope.
 
 ## Six task descriptors
 

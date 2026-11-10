@@ -45,8 +45,8 @@ class Controls:
 class AffineInitializer:
     """Ridge fit to source-task, validation-selected latent controls.
 
-    The original PDF does not identify its W,b. This is the explicit fitting
-    protocol for the experiments in this repository; it does not recover them.
+    Source-standardized descriptors predict validation-selected controls.
+    The coefficients and normalization are frozen for held-out target tasks.
     """
     def __init__(self, mean, scale, W, bias, blocks, provenance=None):
         self.mean=np.asarray(mean); self.scale=np.asarray(scale)

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "00_general",
+    "title": 52,
+    "comment_lf": 1991,
+    "comment_crlf": 2004,
+    "combined_crlf": 2056,
+    "pass": true
+  },
+  {
+    "id": "p4jQ_00",
+    "title": 33,
+    "comment_lf": 697,
+    "comment_crlf": 704,
+    "combined_crlf": 737,
+    "pass": true
+  },
+  {
+    "id": "p4jQ_01",
+    "title": 106,
+    "comment_lf": 2554,
+    "comment_crlf": 2570,
+    "combined_crlf": 2676,
+    "pass": true
+  },
+  {
+    "id": "p4jQ_02",
+    "title": 97,
+    "comment_lf": 2485,
+    "comment_crlf": 2509,
+    "combined_crlf": 2606,
+    "pass": true
+  },
+  {
+    "id": "p4jQ_03",
+    "title": 115,
+    "comment_lf": 2525,
+    "comment_crlf": 2545,
+    "combined_crlf": 2660,
+    "pass": true
+  },
+  {
+    "id": "p4jQ_04",
+    "title": 89,
+    "comment_lf": 2411,
+    "comment_crlf": 2431,
+    "combined_crlf": 2520,
+    "pass": true
+  },
+  {
+    "id": "BKGG_00",
+    "title": 33,
+    "comment_lf": 591,
+    "comment_crlf": 598,
+    "combined_crlf": 631,
+    "pass": true
+  },
+  {
+    "id": "BKGG_01",
+    "title": 105,
+    "comment_lf": 2225,
+    "comment_crlf": 2241,
+    "combined_crlf": 2346,
+    "pass": true
+  },
+  {
+    "id": "BKGG_02",
+    "title": 111,
+    "comment_lf": 2025,
+    "comment_crlf": 2044,
+    "combined_crlf": 2155,
+    "pass": true
+  },
+  {
+    "id": "BKGG_03",
+    "title": 100,
+    "comment_lf": 2509,
+    "comment_crlf": 2535,
+    "combined_crlf": 2635,
+    "pass": true
+  },
+  {
+    "id": "esdH_00",
+    "title": 33,
+    "comment_lf": 734,
+    "comment_crlf": 741,
+    "combined_crlf": 774,
+    "pass": true
+  },
+  {
+    "id": "esdH_01",
+    "title": 84,
+    "comment_lf": 2117,
+    "comment_crlf": 2134,
+    "combined_crlf": 2218,
+    "pass": true
+  },
+  {
+    "id": "esdH_02",
+    "title": 80,
+    "comment_lf": 2505,
+    "comment_crlf": 2525,
+    "combined_crlf": 2605,
+    "pass": true
+  },
+  {
+    "id": "esdH_03",
+    "title": 102,
+    "comment_lf": 1759,
+    "comment_crlf": 1770,
+    "combined_crlf": 1872,
+    "pass": true
+  },
+  {
+    "id": "esdH_04",
+    "title": 95,
+    "comment_lf": 2428,
+    "comment_crlf": 2454,
+    "combined_crlf": 2549,
+    "pass": true
+  },
+  {
+    "id": "esdH_05",
+    "title": 79,
+    "comment_lf": 2278,
+    "comment_crlf": 2292,
+    "combined_crlf": 2371,
+    "pass": true
+  },
+  {
+    "id": "esdH_06",
+    "title": 104,
+    "comment_lf": 2491,
+    "comment_crlf": 2502,
+    "combined_crlf": 2606,
+    "pass": true
+  },
+  {
+    "id": "gg28_00",
+    "title": 33,
+    "comment_lf": 687,
+    "comment_crlf": 694,
+    "combined_crlf": 727,
+    "pass": true
+  },
+  {
+    "id": "gg28_01",
+    "title": 98,
+    "comment_lf": 2564,
+    "comment_crlf": 2581,
+    "combined_crlf": 2679,
+    "pass": true
+  },
+  {
+    "id": "gg28_02",
+    "title": 85,
+    "comment_lf": 2623,
+    "comment_crlf": 2633,
+    "combined_crlf": 2718,
+    "pass": true
+  },
+  {
+    "id": "gg28_03",
+    "title": 80,
+    "comment_lf": 2452,
+    "comment_crlf": 2474,
+    "combined_crlf": 2554,
+    "pass": true
+  }
+]

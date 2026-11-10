@@ -1,0 +1,15 @@
+{
+  "main_text_pages": 10,
+  "comment_blocks": 21,
+  "all_comments_within_limit": true,
+  "max_comment_crlf": 2633,
+  "figures": 9,
+  "numerical_summary_status": "completed experiments",
+  "checks": [
+    "Transfer percentages recomputed from four table pairs",
+    "Descriptor percentages use reference 0.312",
+    "Factorial effects recomputed from eight cell means",
+    "Four-horizon means recomputed within same-objective protocol",
+    "Manuscript references resolved from compiled LaTeX labels"
+  ]
+}

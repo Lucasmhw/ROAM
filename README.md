@@ -2,9 +2,9 @@
 
 This repository contains an executable implementation of the ordinary-parameter ROAM operator family and scripts for the supplementary experiments accompanying the author response. The scripts fit the task initializer, record calibration candidates and per-seed measurements, and generate tables and figures.
 
-Generated results, logs, fitted coefficients, checkpoints, and exported figures are not bundled in this repository. Running the commands below creates them under the Git-ignored `results/` directory.
+Completed experimental summaries, the revised responses, and all nine supplementary figure exports are available in [reporting/](reporting/README.md). The numerical plotting inputs are in [figure_data.json](reporting/figures/figure_data.json). Experiment commands create per-run logs, fitted coefficients, and checkpoints under the Git-ignored `results/` directory.
 
-The numerical choices are specified in [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md). The original submission's aggregate benchmark tables are not substitutes for raw experiment records. The four additional forecasting adapters provide integration checks, not a rerun of the entire submission benchmark.
+The numerical choices are specified in [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md). The reporting package identifies the supplementary experiments, original benchmark aggregates, and table-derived figures separately. Four additional forecasting adapters provide integration checks for the corresponding backbone interfaces.
 
 ## Installation
 
@@ -123,4 +123,4 @@ The inner optimizer supports ordinary, unconstrained parameter blocks; additive 
 
 The released DLinear map uses two shared affine layers and a fixed width-25 moving average. The exact control solves the same identifiable predictor family in float64. The five backbone entry points are available through `scripts/train_forecast.py`; without `--initializer`, that command uses explicitly labeled task-independent controls. Architecture-specific task conditioning requires fitting a compatible block-dimensional initializer. The measured source initializer has two DLinear blocks and must not be silently reused for a different block partition; the CLI checks that count.
 
-The supplied settings make the supplementary experiments executable. They do not reconstruct unavailable original initializer coefficients or original run histories. A local conditioning implication under positive-definiteness assumptions is not a convergence guarantee for the complete adaptive algorithm.
+The supplied settings define the supplementary experiment protocols; the original benchmark tables retain their separately stated settings and aggregation. The local conditioning analysis assumes positive definiteness and concerns a frozen metric, while the experiments evaluate the adaptive algorithm.

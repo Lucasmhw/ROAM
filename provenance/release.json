@@ -1,12 +1,14 @@
 {
   "recorded_core_sha256": "2b2f152fc3dc80abf104c25c41cd4ac03d30ef4b795d7df774ca6a2654a266d3",
-  "released_core_sha256": "6f99f8d40298039e5412832936438530481d5b726e5c2ce9864d14a107aab480",
+  "released_core_sha256": "4149fa44295e557117a199840a1df72911bdc2a7904ba17453a9ee743b4f0f2c",
   "hash_definition": "SHA256 of each sorted roam/*.py basename (UTF-8), followed by that file byte content.",
   "archived_source": "provenance/recorded_core/roam",
   "changed_files": [
+    "roam/controls.py",
+    "roam/descriptors.py",
     "roam/train.py"
   ],
-  "change": "Correct population_fit documentation: a wall-clock budget uses time-spaced evaluation rounds, overriding the fixed-update interval.",
+  "change": "Documentation only: clarify wall-clock evaluation rounds, source-fitted initialization, and descriptor construction. The archived executable core and numerical operations are preserved.",
   "executable_ast_identical_after_docstring_removal": true,
   "raw_result_hashes_preserved": true,
   "recorded_files": {

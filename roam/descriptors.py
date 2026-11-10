@@ -4,9 +4,9 @@ import torch
 
 
 def trajectory_descriptors(trajectory, horizon, context, gns, seasonal_bins=3):
-    """Eqs. 10--14; DC excluded; seasonal set is the top 3 non-DC bins.
+    """Training descriptors: DC excluded; top 3 non-DC seasonal bins.
 
-    This explicitly fixes a bin-selection rule not specified in the manuscript.
+    The moving average uses width 25 and nearest-endpoint extension.
     For classification, horizon=0 is an extension convention, not a forecast.
     """
     x = np.asarray(trajectory,dtype=np.float64)
